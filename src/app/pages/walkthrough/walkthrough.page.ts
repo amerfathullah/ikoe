@@ -16,25 +16,6 @@ export class WalkthroughPage implements OnInit {
     speed: 1000
   };
   dir: String = 'ltr';
-
-  slideList: Array<any> = [
-    {
-      title: 'What is ion<strong>Booking</strong>?',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus, dui accumsan cursus lacinia, nisl risus.',
-      image: 'assets/img/hotel-sp01.png',
-    },
-    {
-      title: 'Why ionBooking?',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus, dui accumsan cursus lacinia, nisl risus.',
-      image: 'assets/img/hotel-sp02.png',
-    },
-    {
-      title: 'Your Vacation is coming!',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus, dui accumsan cursus lacinia, nisl risus.',
-      image: 'assets/img/hotel-sp03.png',
-    }
-  ];
-
   constructor(
     public navCtrl: NavController,
     public menuCtrl: MenuController,

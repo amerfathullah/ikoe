@@ -19,7 +19,7 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { TranslateProvider, HotelProvider } from './providers';
+import { TranslateProvider, VenueProvider } from './providers';
 
 // Modal Pages
 import { ImagePageModule } from './pages/modal/image/image.module';
@@ -40,7 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ImagePageModule,
     LocationPageModule,
     IonicStorageModule.forRoot({
-      name: '__ionbooking2',
+      name: '__iKOE',
       driverOrder: ['indexeddb', 'sqlite', 'websql']
     }),
     TranslateModule.forRoot({
@@ -51,7 +51,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBnTnX1cVqp8AbMAL6TNL50WV8pKPI6t7Q'
+      apiKey: 'AIzaSyAqRNFcPoIxELGf8S1ZvIXJnYTSTqU7yA0'
     }),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
@@ -60,7 +60,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     TranslateProvider,
-    HotelProvider
+    VenueProvider
   ],
   bootstrap: [AppComponent]
 })

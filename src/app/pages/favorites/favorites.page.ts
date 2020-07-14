@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { TranslateProvider, HotelProvider } from '../../providers';
+import { TranslateProvider, VenueProvider } from '../../providers';
 
 @Component({
   selector: 'app-favorites',
@@ -14,7 +14,7 @@ export class FavoritesPage implements OnInit {
   constructor(
     public navCtrl: NavController,
     private translate: TranslateProvider,
-    public hotels: HotelProvider
+    public venues: VenueProvider
   ) { }
 
   ngOnInit() {
@@ -22,7 +22,7 @@ export class FavoritesPage implements OnInit {
   }
 
   deleteItem(favorite) {
-    this.hotels.unfavorite(favorite)
+    this.venues.unfavorite(favorite)
       .then(() => {
         this.getFavorites();
       })
@@ -30,7 +30,7 @@ export class FavoritesPage implements OnInit {
   }
 
   getFavorites() {
-    this.hotels.getFavorites()
+    this.venues.getFavorites()
       .then(data => { this.favorites = data; });
   }
 

@@ -21,15 +21,15 @@
   
         <ion-list class="ion-no-padding" *ngIf="bookings.length">
 
-          <ion-item tappable routerLink="/hotel-detail/{{booking.hotel.id}}" *ngFor="let booking of bookings">
+          <ion-item tappable routerLink="/venue-detail/{{booking.venue.id}}" *ngFor="let booking of bookings">
             <ion-thumbnail slot="start">
-              <img [src]="booking.hotel.thumb">
+              <img [src]="booking.venue.thumb">
             </ion-thumbnail>
             <ion-label>
               <h2>
-                <ion-text color="primary">{{booking.hotel.name}}</ion-text>
+                <ion-text color="primary">{{booking.venue.name}}</ion-text>
               </h2>
-              <p>{{booking.hotel.address}} ∙ {{booking.hotel.price | currency }}</p>
+              <p>{{booking.venue.address}} ∙ {{booking.venue.price | currency }}</p>
               <ion-badge color="success">{{ 'app.label.booked' | translate }}</ion-badge>
             </ion-label>
           </ion-item>

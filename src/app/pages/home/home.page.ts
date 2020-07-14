@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController, LoadingController } from '@ionic/angular';
-import { TranslateProvider, HotelProvider } from '../../providers';
+import { TranslateProvider, VenueProvider } from '../../providers';
 
 import { environment } from '../../../environments/environment';
 
@@ -19,7 +19,7 @@ export class HomePage {
 
   childs: any = 0;
   children: number;
-  hotellocation: string;
+  venuelocation: string;
 
   agmStyles: any[] = environment.agmStyles;
 
@@ -39,9 +39,9 @@ export class HomePage {
     public menuCtrl: MenuController,
     public loadingCtrl: LoadingController,
     private translate: TranslateProvider,
-    public hotels: HotelProvider
+    public venues: VenueProvider
   ) {
-    this.hotels = hotels.getAll();
+    this.venues = venues.getAll();
   }
 
   ionViewWillEnter() {
@@ -51,15 +51,15 @@ export class HomePage {
   initializeItems() {
     this.items = [
       'La Belle Place - Rio de Janeiro',
-      'Marshall Hotel - Marshall Islands',
+      'Marshall Venue - Marshall Islands',
       'Maksoud Plaza - São Paulo',
-      'Hotel Copacabana - Rio de Janeiro',
+      'Venue Copacabana - Rio de Janeiro',
       'Pousada Marés do amanhã - Maragogi'
     ];
   }
 
   itemSelected(item: string) {
-    this.hotellocation = item;
+    this.venuelocation = item;
     this.showItems = false;
   }
 
@@ -90,14 +90,14 @@ export class HomePage {
   //   return this.openMenu = !this.openMenu;
   // }
   // // //
-  async viewHotels() {
+  async viewVenues() {
     const loader = await this.loadingCtrl.create({
       duration: 2000
     });
 
     loader.present();
     loader.onWillDismiss().then(() => {
-      this.navCtrl.navigateForward('hotel-list');
+      this.navCtrl.navigateForward('venue-list');
     });
   }
 

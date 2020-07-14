@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { TranslateProvider, HotelProvider } from '../../providers';
+import { TranslateProvider, VenueProvider } from '../../providers';
 
 @Component({
   selector: 'app-booking-list',
@@ -14,7 +14,7 @@ export class BookingListPage implements OnInit {
   constructor(
     public navCtrl: NavController,
     private translate: TranslateProvider,
-    public hotels: HotelProvider    
+    public venues: VenueProvider    
   ) { }
 
   ngOnInit() {
@@ -22,7 +22,7 @@ export class BookingListPage implements OnInit {
   }
 
   getBookings() {
-    this.hotels.getBookings()
+    this.venues.getBookings()
       .then(data => { this.bookings = data; });
   }
 

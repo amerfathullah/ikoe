@@ -67,24 +67,6 @@ export class AppComponent {
         icon: 'heart'
       },
       {
-        title: 'Rent a Car',
-        url: '/rentcar',
-        direct: 'forward',
-        icon: 'car'
-      },
-      {
-        title: 'Trip Activities',
-        url: '/activities',
-        direct: 'forward',
-        icon: 'beer'
-      },
-      {
-        title: 'Local Weather',
-        url: '/local-weather',
-        direct: 'forward',
-        icon: 'partly-sunny'
-      },
-      {
         title: 'About',
         url: '/about',
         direct: 'forward',
@@ -95,6 +77,12 @@ export class AppComponent {
         url: '/support',
         direct: 'forward',
         icon: 'help-buoy'
+      },
+      {
+        title: 'Settings',
+        url: '/settings',
+        direct: 'forward',
+        icon: 'settings'
       }
     ];
 
