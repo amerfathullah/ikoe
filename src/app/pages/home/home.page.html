@@ -184,29 +184,7 @@
     </ion-card>
 
     <hr class="bg-tertiary">
-
-    <ion-text color="primary">
-      <h3><ion-icon size="small" color="dark" name="bookmarks"></ion-icon> {{ 'app.pages.home.title.listvenues' | translate }}</h3>
-    </ion-text>
-
-    <ion-card>
-      <ion-list>
-          <ion-item color="dark" tappable routerLink="/venue-detail/{{venue.id}}" *ngFor="let venue of venues | slice:4:8; let i = index">
-              <ion-thumbnail slot="start">
-                <img [src]="venue.thumb">
-              </ion-thumbnail>
-              <ion-label>
-                <h2><strong>{{ venue.name }}</strong></h2>
-                <h3>
-                  <ion-badge slot="start" color="secondary" class="rooms">
-                    <ion-icon name="book" color="tertiary"></ion-icon>
-                    {{ venue.numb_available_rooms }} {{ 'app.pages.home.label.availrooms' | translate }}
-                  </ion-badge>                
-                </h3>        
-              </ion-label>
-            </ion-item>
-      </ion-list>
-    </ion-card>
+    
   </div>
   <!-- ## -->
   <!-- ## -->

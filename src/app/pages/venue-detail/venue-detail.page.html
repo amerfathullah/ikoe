@@ -70,13 +70,6 @@
       </div>
 
       <div *ngSwitchCase="'rooms'" [@staggerIn]='venue.rooms.length'>
-        <ion-card class="ion-no-margin ion-margin-vertical bg-profile animated fadeIn">
-          <ion-card-content>
-            <ion-text color="light">
-              <p>{{venue.room_amenities}}</p>
-            </ion-text>
-          </ion-card-content>
-        </ion-card>
 
         <ion-card class="ion-no-margin ion-margin-vertical bg-white" *ngFor="let room of venue.rooms">
           <img [src]="room.thumb">
@@ -84,14 +77,13 @@
           <ion-card-content>
             
             <ion-card-subtitle>
-              <ion-text color="secondary">{{room.chairs}}</ion-text>
+              <ion-text color="secondary">Chairs: {{room.chairs}}</ion-text>
             </ion-card-subtitle>
 
             <ion-card-title>
               <ion-text color="primary">{{room.name}}</ion-text>
             </ion-card-title>
 
-            <ion-badge slot="start" color="primary" class="ion-margin-bottom">{{ room.numb_available_rooms }} {{ 'app.label.availrooms' | translate }}</ion-badge>
             <p><ion-text color="primary">{{room.room_info}}</ion-text></p>
             
             <ion-button size="large" shape="round" expand="full" color="success" (click)="checkout(venue.id, room.id)">
@@ -112,22 +104,10 @@
     <ion-toolbar color="primary">
       <ion-grid class="ion-no-padding">
           <ion-row>
-            <ion-col size="4" class="ion-no-padding">
+            <ion-col size="4" class="ion-no-padding" offset="4">
               <ion-button size="small" shape="round" expand="full" fill="clear" color="tertiary" (click)="favorite(venue)">
                 <ion-icon slot="start" name="heart"></ion-icon>
                 {{ 'app.button.fav' | translate }}
-              </ion-button>
-            </ion-col>
-            <ion-col size="4" class="ion-no-padding">
-              <ion-button size="small" shape="round" expand="full" fill="clear" color="tertiary" href="tel:+13174562564">
-                <ion-icon slot="start" name="call"></ion-icon>
-                {{ 'app.button.callus' | translate }}
-              </ion-button>
-            </ion-col>
-            <ion-col size="4" class="ion-no-padding">
-              <ion-button size="small" shape="round" expand="full" fill="clear" color="light" (click)="share()">
-                <ion-icon slot="start" name="share"></ion-icon>
-                {{ 'app.button.share' | translate }}
               </ion-button>
             </ion-col>
           </ion-row>

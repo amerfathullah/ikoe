@@ -26,7 +26,7 @@
         </ion-badge>
         <ion-badge slot="end" color="success" class="price">
           {{ 'app.label.totalvat' | translate }}
-          <h2><strong>{{ room.price + 4 | currency:'MYR':'code' }}</strong></h2>
+          <h2><strong>{{ room.price | currency:'MYR':'code' }}</strong></h2>
         </ion-badge>
       </ion-card-content>
     </ion-card>
@@ -38,14 +38,8 @@
       <ion-label>
         <h2><strong>{{ room.name }}</strong></h2>
         <h3>
-          {{ room.chairs }}
+          Chairs: {{ room.chairs }}
         </h3>
-        <ion-badge slot="start" color="dark">
-          <ion-icon name="calendar" color="light"></ion-icon>
-          4 {{ 'app.label.nights' | translate }} / 
-          <ion-icon name="person" color="light"></ion-icon>
-          3 {{ 'app.label.guests' | translate }}
-        </ion-badge>
       </ion-label>
     </ion-item>
 
@@ -65,20 +59,6 @@
           </ion-badge>
         </ion-item>
 
-        <div class="ion-padding">
-          <h4>
-            <ion-text color="primary">{{ 'app.label.otherguests' | translate }}</ion-text>
-          </h4>
-      
-          <ion-item>
-            <ion-label color="dark" position="stacked">{{ 'app.label.adult' | translate }} 1 {{ 'app.label.name' | translate }}:</ion-label>
-            <ion-input inputmode="text" placeholder="Ex. Joe Doe" value=""></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label color="dark" position="stacked">{{ 'app.label.child' | translate }} 1 {{ 'app.label.name' | translate }}:</ion-label>
-            <ion-input inputmode="text" placeholder="Ex. Joe Doe" value=""></ion-input>
-          </ion-item>
-        </div>
       </ion-card-content>
     </ion-card>
 
@@ -89,7 +69,7 @@
           <ion-segment-button value="creditcard">
             {{ 'app.label.cc' | translate }}
           </ion-segment-button>
-          <ion-segment-button value="paypal">
+          <ion-segment-button value="onlinebanking">
             {{ 'app.label.pp' | translate }}
           </ion-segment-button>
         </ion-segment>
@@ -163,23 +143,17 @@
               <ion-col>
                 <ion-button class="ion-margin-top" size="large" shape="round" expand="full" color="dark" (click)="makeBooking(venue)">
                   <ion-icon slot="start" name="card"></ion-icon>
-                  {{ 'app.button.checkout' | translate }} ({{ room.price + 4 | currency:'MYR':'code' }})
+                  {{ 'app.button.checkout' | translate }} ({{ room.price | currency:'MYR':'code' }})
                 </ion-button>
               </ion-col>
             </ion-row>
           </ion-grid>
         
-          <ion-grid *ngSwitchCase="'paypal'" class="ion-padding">
-            <ion-row>
-              <ion-col class="ion-no-padding ion-text-center">
-                <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCA0OCA0OCIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij48ZyBpZD0ic3VyZmFjZTEiPjxwYXRoIHN0eWxlPSIgZmlsbDojMTU2NUMwOyIgZD0iTSAxOC42OTkyMTkgMTMuNzY1NjI1IEwgMTguNzAzMTI1IDEzLjc2OTUzMSBDIDE4LjgwODU5NCAxMy4zMjQyMTkgMTkuMTg3NSAxMyAxOS42NjAxNTYgMTMgTCAzMy4xMzI4MTMgMTMgQyAzMy4xNDg0MzggMTMgMzMuMTY0MDYzIDEyLjk5MjE4OCAzMy4xODM1OTQgMTIuOTkyMTg4IEMgMzIuODk0NTMxIDguMjE0ODQ0IDI4Ljg4NjcxOSA2IDI1LjM1MTU2MyA2IEwgMTEuODc4OTA2IDYgQyAxMS40MDIzNDQgNiAxMS4wMjczNDQgNi4zMzU5MzggMTAuOTIxODc1IDYuNzc3MzQ0IEwgMTAuOTE3OTY5IDYuNzczNDM4IEwgNS4wMjczNDQgMzMuODEyNSBMIDUuMDQyOTY5IDMzLjgxMjUgQyA1LjAyNzM0NCAzMy44Nzg5MDYgNS4wMDM5MDYgMzMuOTM3NSA1LjAwMzkwNiAzNC4wMDc4MTMgQyA1LjAwMzkwNiAzNC41NjI1IDUuNDQ5MjE5IDM1IDYuMDAzOTA2IDM1IEwgMTQuMDc0MjE5IDM1IFogIi8+PHBhdGggc3R5bGU9IiBmaWxsOiMwMzlCRTU7IiBkPSJNIDMzLjE4MzU5NCAxMi45OTIxODggQyAzMy4yMzQzNzUgMTMuODcxMDk0IDMzLjE3OTY4OCAxNC44MjQyMTkgMzIuOTUzMTI1IDE1Ljg3NSBDIDMxLjY3MTg3NSAyMS44NzEwOTQgMjcuMDQyOTY5IDI0Ljk5MjE4OCAyMS4zMjAzMTMgMjQuOTkyMTg4IEMgMjEuMzIwMzEzIDI0Ljk5MjE4OCAxNy44NDc2NTYgMjQuOTkyMTg4IDE3LjAwNzgxMyAyNC45OTIxODggQyAxNi40ODQzNzUgMjQuOTkyMTg4IDE2LjIzODI4MSAyNS4yOTY4NzUgMTYuMTI1IDI1LjUzMTI1IEwgMTQuMzg2NzE5IDMzLjU3ODEyNSBMIDE0LjA4MjAzMSAzNS4wMDc4MTMgTCAxNC4wNzQyMTkgMzUuMDA3ODEzIEwgMTIuODEyNSA0MC44MDQ2ODggTCAxMi44MjQyMTkgNDAuODA0Njg4IEMgMTIuODEyNSA0MC44NzEwOTQgMTIuNzg1MTU2IDQwLjkyOTY4OCAxMi43ODUxNTYgNDEgQyAxMi43ODUxNTYgNDEuNTU0Njg4IDEzLjIzNDM3NSA0MiAxMy43ODUxNTYgNDIgTCAyMS4xMTcxODggNDIgTCAyMS4xMzI4MTMgNDEuOTg4MjgxIEMgMjEuNjA1NDY5IDQxLjk4NDM3NSAyMS45ODA0NjkgNDEuNjQ0NTMxIDIyLjA3ODEyNSA0MS4yMDMxMjUgTCAyMi4wOTM3NSA0MS4xODc1IEwgMjMuOTA2MjUgMzIuNzY5NTMxIEMgMjMuOTA2MjUgMzIuNzY5NTMxIDI0LjAzMTI1IDMxLjk2ODc1IDI0Ljg3ODkwNiAzMS45Njg3NSBDIDI1LjcyMjY1NiAzMS45Njg3NSAyOS4wNTQ2ODggMzEuOTY4NzUgMjkuMDU0Njg4IDMxLjk2ODc1IEMgMzQuNzc3MzQ0IDMxLjk2ODc1IDM5LjQ1NzAzMSAyOC44NjMyODEgNDAuNzM4MjgxIDIyLjg2NzE4OCBDIDQyLjE3OTY4OCAxNi4xMDU0NjkgMzcuMzU5Mzc1IDEzLjAxOTUzMSAzMy4xODM1OTQgMTIuOTkyMTg4IFogIi8+PHBhdGggc3R5bGU9IiBmaWxsOiMyODM1OTM7IiBkPSJNIDE5LjY2MDE1NiAxMyBDIDE5LjE4NzUgMTMgMTguODA4NTk0IDEzLjMyNDIxOSAxOC43MDMxMjUgMTMuNzY5NTMxIEwgMTguNjk5MjE5IDEzLjc2NTYyNSBMIDE2LjEyNSAyNS41MzEyNSBDIDE2LjIzODI4MSAyNS4yOTY4NzUgMTYuNDg0Mzc1IDI0Ljk5MjE4OCAxNy4wMDM5MDYgMjQuOTkyMTg4IEMgMTcuODQ3NjU2IDI0Ljk5MjE4OCAyMS4yMzgyODEgMjQuOTkyMTg4IDIxLjIzODI4MSAyNC45OTIxODggQyAyNi45NjQ4NDQgMjQuOTkyMTg4IDMxLjY3MTg3NSAyMS44NzEwOTQgMzIuOTUzMTI1IDE1Ljg3ODkwNiBDIDMzLjE3OTY4OCAxNC44MjQyMTkgMzMuMjM0Mzc1IDEzLjg3MTA5NCAzMy4xODM1OTQgMTIuOTk2MDk0IEMgMzMuMTY0MDYzIDEyLjk5MjE4OCAzMy4xNDg0MzggMTMgMzMuMTMyODEzIDEzIFogIi8+PC9nPjwvc3ZnPg=="
-                  alt="paypal">
-              </ion-col>
-            </ion-row>
+          <ion-grid *ngSwitchCase="'onlinebanking'" class="ion-padding">
             <ion-row>
               <ion-col>
                 <ion-item class="ion-no-padding">
-                  <ion-input type="mail" color="light" placeholder="E-mail"></ion-input>
+                  <ion-input type="text" color="light" placeholder="Username"></ion-input>
                 </ion-item>
               </ion-col>
             </ion-row>
@@ -194,7 +168,7 @@
               <ion-col>
                 <ion-button class="ion-margin-top" size="large" shape="round" expand="full" color="dark" (click)="makeBooking(venue)">
                   <ion-icon slot="start" name="wallet"></ion-icon>
-                  {{ 'app.button.checkout' | translate }} ({{ room.price + 4 | currency:'MYR':'code' }})
+                  {{ 'app.button.checkout' | translate }} ({{ room.price | currency:'MYR':'code' }})
                 </ion-button>
               </ion-col>
             </ion-row>
