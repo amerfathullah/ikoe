@@ -57,18 +57,14 @@
           <ion-col size="4" class="ion-no-padding br bb bl bt">
               <ion-item>
                 <ion-label class="ion-no-padding text08">
-                    <ion-text color="dark">{{ 'app.pages.home.label.rooms' | translate }}</ion-text>
+                    <ion-text color="dark">{{ 'app.pages.home.label.types' | translate }}</ion-text>
                 </ion-label>
-                <ion-select [(ngModel)]="rooms" cancelText="Cancel" okText="OK" color="primary"  class="ion-no-padding text1 text-dark">
-                  <ion-select-option value="1" selected="true">1</ion-select-option>
-                  <ion-select-option value="2">2</ion-select-option>
-                  <ion-select-option value="3">3</ion-select-option>
-                  <ion-select-option value="4">4</ion-select-option>
-                  <ion-select-option value="5">5</ion-select-option>
-                  <ion-select-option value="6">6</ion-select-option>
-                  <ion-select-option value="7">7</ion-select-option>
-                  <ion-select-option value="8">8</ion-select-option>
-                  <ion-select-option value="9">9</ion-select-option>
+                <ion-select [(ngModel)]="type" cancelText="Cancel" okText="OK" color="primary"  class="ion-no-padding text1 text-dark">
+                  <ion-select-option value="Lecture Room" selected="true">Lecture Room</ion-select-option>
+                  <ion-select-option value="Tutorial Room">Tutorial Room</ion-select-option>
+                  <ion-select-option value="Exam Hall">Exam Hall</ion-select-option>
+                  <ion-select-option value="Auditorium">Auditorium</ion-select-option>
+                  <ion-select-option value="Lecture Theatre">Lecture Theatre</ion-select-option>
                 </ion-select>
               </ion-item>
           </ion-col>
@@ -76,18 +72,14 @@
 
               <ion-item>
                 <ion-label class="ion-no-padding text-primary text08">
-                  <ion-text color="dark">{{ 'app.pages.home.label.adults' | translate }}</ion-text>
+                  <ion-text color="dark">{{ 'app.pages.home.label.block' | translate }}</ion-text>
                 </ion-label>
-                <ion-select [(ngModel)]="adults" cancelText="Cancel" okText="OK" class="ion-no-padding text1 text-dark">
-                  <ion-select-option value="1" selected="true">1</ion-select-option>
-                  <ion-select-option value="2">2</ion-select-option>
-                  <ion-select-option value="3">3</ion-select-option>
-                  <ion-select-option value="4">4</ion-select-option>
-                  <ion-select-option value="5">5</ion-select-option>
-                  <ion-select-option value="6">6</ion-select-option>
-                  <ion-select-option value="7">7</ion-select-option>
-                  <ion-select-option value="8">8</ion-select-option>
-                  <ion-select-option value="9">9</ion-select-option>
+                <ion-select [(ngModel)]="block" cancelText="Cancel" okText="OK" class="ion-no-padding text1 text-dark">
+                  <ion-select-option value="E1" selected="true">E1</ion-select-option>
+                  <ion-select-option value="E2">E2</ion-select-option>
+                  <ion-select-option value="E3">E3</ion-select-option>
+                  <ion-select-option value="E4">E4</ion-select-option>
+                  <ion-select-option value="E5">E5</ion-select-option>
                 </ion-select>
               </ion-item>
 
@@ -96,19 +88,14 @@
 
               <ion-item>
                 <ion-label class="ion-no-padding ion-no-margin text-primary text08">
-                  <ion-text color="dark">{{ 'app.pages.home.label.children' | translate }}</ion-text>
+                  <ion-text color="dark">{{ 'app.pages.home.label.level' | translate }}</ion-text>
                 </ion-label>
-                <ion-select [(ngModel)]="children" cancelText="Cancel" okText="OK" (ngModelChange)="childrenArr($event)" class="ion-no-padding text1 text-dark">
-                  <ion-select-option value="0" selected="true">0</ion-select-option>
-                  <ion-select-option value="1">1</ion-select-option>
+                <ion-select [(ngModel)]="level" cancelText="Cancel" okText="OK" class="ion-no-padding text1 text-dark">
+                  <ion-select-option value="1" selected="true">1</ion-select-option>
                   <ion-select-option value="2">2</ion-select-option>
                   <ion-select-option value="3">3</ion-select-option>
                   <ion-select-option value="4">4</ion-select-option>
                   <ion-select-option value="5">5</ion-select-option>
-                  <ion-select-option value="6">6</ion-select-option>
-                  <ion-select-option value="7">7</ion-select-option>
-                  <ion-select-option value="8">8</ion-select-option>
-                  <ion-select-option value="9">9</ion-select-option>
                 </ion-select>
               </ion-item>
 
@@ -118,53 +105,20 @@
           </ion-col>
         </ion-row>
         
-        <ion-row *ngIf="children > 0" class="animated fadeIn">
-          <ion-col size="12" class="ion-padding-vertical">
-            <ion-text color="primary" class="ion-text-center">
-              <h3 class="bold" *ngIf="children > 0 && children < 2">{{ 'app.pages.home.label.childage' | translate }}</h3>
-              <h3 class="bold" *ngIf="children > 1">{{ 'app.pages.home.label.childrenages' | translate }}</h3>
-            </ion-text>
-          </ion-col>
-          <ion-col size="6" class="ion-no-padding bb bt br bl" *ngFor="let child of childs; let i = index">
-
-              <ion-item>
-                <ion-label class="ion-no-padding ion-no-margin text-primary text08">
-                  <ion-text color="dark">{{ 'app.pages.home.label.child' | translate }} {{ i + 1 }}</ion-text>
-                </ion-label>
-                <ion-select cancelText="Cancel" okText="OK" class="ion-no-padding text08 text-dark">
-                  <ion-select-option value="0" selected="true">0</ion-select-option>
-                  <ion-select-option value="1">1</ion-select-option>
-                  <ion-select-option value="2">2</ion-select-option>
-                  <ion-select-option value="3">3</ion-select-option>
-                  <ion-select-option value="4">4</ion-select-option>
-                  <ion-select-option value="5">5</ion-select-option>
-                  <ion-select-option value="6">6</ion-select-option>
-                  <ion-select-option value="7">7</ion-select-option>
-                  <ion-select-option value="8">8</ion-select-option>
-                  <ion-select-option value="9">9</ion-select-option>
-                  <ion-select-option value="10">10</ion-select-option>
-                  <ion-select-option value="11">11</ion-select-option>
-                  <ion-select-option value="12">12</ion-select-option>
-                  <ion-select-option value="13">13</ion-select-option>
-                  <ion-select-option value="14">14</ion-select-option>
-                </ion-select>
-              </ion-item>
-
-          </ion-col>         
-        </ion-row>
         <ion-row class="adjust-qts">
           <ion-col size="12" class="ion-no-padding ion-margin-top ion-margin-bottom bb bt br bl">
 
               <ion-item>
                 <ion-label class="ion-no-padding ion-no-margin text-primary text08">
-                  <ion-text color="dark">{{ 'app.pages.home.label.pamenities' | translate }}</ion-text>
+                  <ion-text color="dark">{{ 'app.pages.home.label.equipments' | translate }}</ion-text>
                 </ion-label>
                 <ion-select multiple="true" cancelText="Cancel" okText="OK" class="ion-no-padding text08 text-dark">
-                  <ion-select-option value="0" selected="true">Wifi</ion-select-option>
-                  <ion-select-option value="1">Conference</ion-select-option>
-                  <ion-select-option value="2">Pool</ion-select-option>
-                  <ion-select-option value="3">Free Parking</ion-select-option>
-                  <ion-select-option value="4">Free Breakfast</ion-select-option>
+                  <ion-select-option value="1" selected="true">Air Conditioner</ion-select-option>
+                  <ion-select-option value="2">Wifi</ion-select-option>
+                  <ion-select-option value="3">Projector</ion-select-option>
+                  <ion-select-option value="4">Speakers</ion-select-option>
+                  <ion-select-option value="5">Conference</ion-select-option>
+                  <ion-select-option value="6">Computer</ion-select-option>
                 </ion-select>
               </ion-item>
 

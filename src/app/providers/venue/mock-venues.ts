@@ -5,7 +5,7 @@ export let VENUES = [
     price: 0,
     sale_price: 0,
     description: "Normal rooms for students and lecturers use for classes.",
-    features: "Air-conditioned. Internet, computer, projector provided.",
+    features: "Air-conditioned. Wifi, computer, projector provided.",
     thumb: "assets/img/venue/thumb/venue_1.jpg",
     images: [
       "assets/img/venue/thumb/venue_1.jpg",
@@ -23,7 +23,7 @@ export let VENUES = [
       {
         id: 2,
         icon: "wifi",
-        name: "Internet"
+        name: "Wifi"
       },
       {
         id: 3,
@@ -45,7 +45,7 @@ export let VENUES = [
         name: "ENG LRM E0-1-15",
         chairs: "40",
         refundable: 1,
-        room_info: "Air-conditioned. Internet, computer, projector provided.",
+        room_info: "Air-conditioned. Wifi, computer, projector provided.",
         thumb: "assets/img/venue/thumb/venue_4.jpg",
         price: 0
       },
@@ -55,7 +55,7 @@ export let VENUES = [
         name: "ENG LRM E1-2-17",
         chairs: "40",
         refundable: 1,
-        room_info: "Air-conditioned. Internet, computer, projector provided.",
+        room_info: "Air-conditioned. Wifi, computer, projector provided.",
         thumb: "assets/img/venue/thumb/venue_2.jpg",
         price: 0
       },
@@ -67,7 +67,7 @@ export let VENUES = [
     price: 0,
     sale_price: 0,
     description: "A bit spacious than lecture rooms. Use for students and lecturers to conduct classes.",
-    features: "Air-conditioned. Internet, computer, projector provided.",
+    features: "Air-conditioned. Wifi, computer, projector provided.",
     thumb: "assets/img/venue/thumb/venue_2.jpg",
     images: [
       "assets/img/venue/thumb/venue_2.jpg",
@@ -85,7 +85,7 @@ export let VENUES = [
       {
         id: 2,
         icon: "wifi",
-        name: "Internet"
+        name: "Wifi"
       },
       {
         id: 3,
@@ -107,7 +107,7 @@ export let VENUES = [
         name: "ENG TR E1-2-18",
         chairs: "60",
         refundable: 1,
-        room_info: "Air-conditioned. Internet, computer, projector provided.",
+        room_info: "Air-conditioned. Wifi, computer, projector provided.",
         thumb: "assets/img/venue/thumb/venue_4.jpg",
         price: 0
       },
@@ -117,7 +117,7 @@ export let VENUES = [
         name: "ENG TR E1-3-17",
         chairs: "60",
         refundable: 1,
-        room_info: "Air-conditioned. Internet, computer, projector provided.",
+        room_info: "Air-conditioned. Wifi, computer, projector provided.",
         thumb: "assets/img/venue/thumb/venue_2.jpg",
         price: 0
       },
@@ -129,7 +129,7 @@ export let VENUES = [
     price: 0,
     sale_price: 0,
     description: "A wide room for lecturers to conduct classes or exams",
-    features: "Air-conditioned. Internet, computer, projector provided.",
+    features: "Air-conditioned. Wifi, computer, projector provided.",
     thumb: "assets/img/venue/thumb/venue_3.jpg",
     images: [
       "assets/img/venue/thumb/venue_3.jpg",
@@ -147,7 +147,7 @@ export let VENUES = [
       {
         id: 2,
         icon: "wifi",
-        name: "Internet"
+        name: "Wifi"
       },
       {
         id: 3,
@@ -169,7 +169,7 @@ export let VENUES = [
         name: "ENG EXAM HALL 1 E1-3",
         chairs: "70",
         refundable: 1,
-        room_info: "Air-conditioned. Internet, computer, projector provided.",
+        room_info: "Air-conditioned. Wifi, computer, projector provided.",
         thumb: "assets/img/venue/thumb/venue_4.jpg",
         price: 0
       },
@@ -179,7 +179,7 @@ export let VENUES = [
         name: "ENG EXAM HALL 3 E0-4",
         chairs: "70",
         refundable: 1,
-        room_info: "Air-conditioned. Internet, computer, projector provided.",
+        room_info: "Air-conditioned. Wifi, computer, projector provided.",
         thumb: "assets/img/venue/thumb/venue_2.jpg",
         price: 0
       },
@@ -191,7 +191,7 @@ export let VENUES = [
     price: 0,
     sale_price: 0,
     description: "A wide room with escalating chairs. Use to hold conferences or classes.",
-    features: "Air-conditioned. Internet, computer, speakers, projector provided.",
+    features: "Air-conditioned. Wifi, computer, speakers, projector provided.",
     thumb: "assets/img/venue/thumb/venue_4.jpg",
     images: [
       "assets/img/venue/thumb/venue_4.jpg",
@@ -209,7 +209,7 @@ export let VENUES = [
       {
         id: 2,
         icon: "wifi",
-        name: "Internet"
+        name: "Wifi"
       },
       {
         id: 3,
@@ -241,7 +241,7 @@ export let VENUES = [
         name: "ENG AUDI A E2-1-9",
         chairs: "80",
         refundable: 1,
-        room_info: "Air-conditioned. Internet, computer, speakers, projector provided.",
+        room_info: "Air-conditioned. Wifi, computer, speakers, projector provided.",
         thumb: "assets/img/venue/thumb/venue_4.jpg",
         price: 0
       },
@@ -251,7 +251,7 @@ export let VENUES = [
         name: "ENG AUDI B E2-2-9",
         chairs: "80",
         refundable: 1,
-        room_info: "Air-conditioned. Internet, computer, speakers, projector provided.",
+        room_info: "Air-conditioned. Wifi, computer, speakers, projector provided.",
         thumb: "assets/img/venue/thumb/venue_2.jpg",
         price: 0
       },
@@ -263,7 +263,7 @@ export let VENUES = [
     price: 0,
     sale_price: 0,
     description: "More spacious than the auditorium. Has escalating chairs. Use to hold conferences or classes.",
-    features: "Air-conditioned. Internet, computer, speakers, projector provided.",
+    features: "Air-conditioned. Wifi, computer, speakers, projector provided.",
     thumb: "assets/img/venue/thumb/venue_5.jpg",
     images: [
       "assets/img/venue/thumb/venue_5.jpg",
@@ -281,7 +281,7 @@ export let VENUES = [
       {
         id: 2,
         icon: "wifi",
-        name: "Internet"
+        name: "Wifi"
       },
       {
         id: 3,
@@ -313,7 +313,7 @@ export let VENUES = [
         name: "ENG LT1 E0-1",
         chairs: "100",
         refundable: 1,
-        room_info: "Air-conditioned. Internet, computer, speakers, projector provided.",
+        room_info: "Air-conditioned. Wifi, computer, speakers, projector provided.",
         thumb: "assets/img/venue/thumb/venue_4.jpg",
         price: 0
       },
@@ -323,7 +323,7 @@ export let VENUES = [
         name: "ENG LT2 E0-1",
         chairs: "100",
         refundable: 1,
-        room_info: "Air-conditioned. Internet, computer, speakers, projector provided.",
+        room_info: "Air-conditioned. Wifi, computer, speakers, projector provided.",
         thumb: "assets/img/venue/thumb/venue_2.jpg",
         price: 0
       },

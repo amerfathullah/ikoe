@@ -14,10 +14,6 @@ export class VenueCheckoutPage implements OnInit {
   room: any;
   roomID: any;
   paymethods: string = 'creditcard';
-  // number of nights
-  public nights = 7;
-  // number of guests
-  public guests = 3;
   // date from
   public dateFrom = new Date();
   // date to

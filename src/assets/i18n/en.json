@@ -30,9 +30,8 @@
     "app.label.passengers": "Passengers",
     "app.label.doors": "Doors",
     "app.label.remove": "Remove",
-    "app.label.adult": "Adult",
+    "app.label.block": "Block",
     "app.label.child": "Child",
-    "app.label.otherguests": "Other Guests",
     "app.label.userdata": "User Data",
     "app.label.usertype": "User Type",
     "app.label.edit": "Edit",
@@ -42,7 +41,7 @@
     "app.label.email": "Email",
     "app.label.password": "Password",
     "app.label.details": "Details",
-    "app.label.rooms": "Rooms",
+    "app.label.type": "Types",
     "app.label.about": "About",
     "app.label.amenities": "Amenities",
     "app.label.features": "Features",
@@ -71,23 +70,15 @@
 
     "app.pages.home.label.checkin": "Check-in",
     "app.pages.home.label.checkout": "Check-out",
-    "app.pages.home.label.rooms": "Rooms",
-    "app.pages.home.label.adults": "Adults",
-    "app.pages.home.label.children": "Children",
-    "app.pages.home.label.child": "Child",
-    "app.pages.home.label.childage": "Child's age",
-    "app.pages.home.label.childrenages": "Children's ages",
-    "app.pages.home.label.pamenities": "Preferred Amenities",
+    "app.pages.home.label.types": "Venue Type",
+    "app.pages.home.label.block": "Block",
+    "app.pages.home.label.level": "Level",
+    "app.pages.home.label.equipments": "Equipments",
     "app.pages.home.label.availrooms": "Available Venues",
 
-    "app.pages.home.title.recommended": "Recommended Venues",
     "app.pages.home.title.listvenues": "List of Venues",
-    "app.pages.home.title.nearyou": "Venues Near You",
-
 
     "app.pages.about.title.header": "About",
-
-
 
     "app.pages.bookinglist.title.header": "Booking List",
     "app.pages.bookinglist.title.nores": "You have no bookings yet.",

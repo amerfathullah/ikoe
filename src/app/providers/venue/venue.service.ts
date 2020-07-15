@@ -7,7 +7,7 @@ import { VENUES } from "./mock-venues";
 
 export class VenueProvider {
     venues: any;
-    room: any;
+    type: any;
     favoriteCounter: number = 0;
     favorites: Array<any> = [];
     bookingCounter: number = 0;

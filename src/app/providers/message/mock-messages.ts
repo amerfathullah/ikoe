@@ -1,42 +1,22 @@
 const messages: Array<any> = [
     {
         id: 1,
-        title: "New Offer 25% OFF",
-        date: "2017-11-01T00:00:00.000-0300",
-        senderId: 2,
-        senderName: "Caroline Broker",
-        email: "caroline@ionbooking.com",
-        message: "Please body! contact me for help you with my new offer, keep in touch for this or other offers.",
-        read: false
+        title: "Welcome",
+        date: "2020-07-15T00:00:00.000-0300",
+        senderId: 1,
+        senderName: "Admin",
+        email: "admin@ikoe.com",
+        message: "Welcome to iKOE DEMO Application. Please give us a feedback after trying our application",
+        read: true
     },
     {
         id: 2,
-        title: "New Offer 15% OFF!",
-        date: "2017-11-01T00:00:00.000-0300",
-        senderId: 3,
-        senderName: "Michael Jones",
-        email: "michael@ionbooking.com",
-        message: "Please body! contact me for help you with my new offer, keep in touch for this or other offers.",
-        read: true
-    },
-    {
-        id: 3,
-        title: "New Cruises coming!",
-        date: "2017-10-20T00:00:00.000-0300",
-        senderId: 3,
-        senderName: "Michael Jones",
-        email: "michael@ionbooking.com",
-        message: "Please body! contact me for help you with my new offer, keep in touch for this or other offers.",
-        read: true
-    },
-    {
-        id: 4,
-        title: "Your New Trip",
-        date: "2017-10-09T00:00:00.000-0300",
-        senderId: 5,
-        senderName: "Jessica Stevens",
-        email: "jessica@ionbooking.com",
-        message: "Please body! contact me for help you with my new offer, keep in touch for this or other offers.",
+        title: "Message From The Developer",
+        date: "2020-07-15T00:00:00.000-0300",
+        senderId: 2,
+        senderName: "Amer Fathullah",
+        email: "amerfathullah@gmail.com",
+        message: "This is just a demo application for my final year project. Nothing actually works except some fundamental functions. Please report if you notice any errors or provide me feedbacks to improve this application.",
         read: false
     }
 ];

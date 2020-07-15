@@ -55,6 +55,12 @@ export class AppComponent {
         icon: 'home'
       },
       {
+        title: 'Venue List',
+        url: '/venue-list',
+        direct: 'forward',
+        icon: 'list'
+      },
+      {
         title: 'Booking List',
         url: '/booking-list',
         direct: 'forward',
@@ -67,10 +73,11 @@ export class AppComponent {
         icon: 'heart'
       },
       {
-        title: 'About',
-        url: '/about',
+        title: 'Settings',
+        url: '/settings',
         direct: 'forward',
-        icon: 'information-circle-outline'
+        icon: 'settings'
+
       },
       {
         title: 'Support',
@@ -79,10 +86,10 @@ export class AppComponent {
         icon: 'help-buoy'
       },
       {
-        title: 'Settings',
-        url: '/settings',
+        title: 'About',
+        url: '/about',
         direct: 'forward',
-        icon: 'settings'
+        icon: 'information-circle'
       }
     ];
 

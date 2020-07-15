@@ -14,11 +14,9 @@ export class HomePage {
   searchQuery: String = '';
   items: string[];
   showItems: Boolean = false;
-  rooms: any;
-  adults: any;
-
-  childs: any = 0;
-  children: number;
+  type: any;
+  block: any;
+  level: any;
 
   agmStyles: any[] = environment.agmStyles;
 
@@ -59,11 +57,6 @@ export class HomePage {
 
   itemSelected(item: string) {
     this.showItems = false;
-  }
-
-  childrenArr(chil) {
-    const child = Number(chil);
-    this.childs = Array(child).fill(0).map((v, i) => i);
   }
 
   getItems(ev: any) {
