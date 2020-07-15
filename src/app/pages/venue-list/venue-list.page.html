@@ -68,34 +68,6 @@
         </ion-item>
         <!-- # -->
       </div>
-      <div *ngSwitchCase="'maplist'">
-        <!-- # -->
-        <agm-map [latitude]="venues[0].location.lat" [longitude]="venues[0].location.lon" [zoom]="10" [zoomControl]="false" [styles]="agmStyles"
-          [streetViewControl]="false">
-          <agm-marker *ngFor="let venue of venues" [latitude]="venue.location.lat" [longitude]="venue.location.lon">
-            <agm-info-window>
-              <ion-item tappable routerLink="/venue-detail/{{venue.id}}">
-                <ion-thumbnail slot="start">
-                  <img [src]="venue.thumb">
-                </ion-thumbnail>
-                <ion-label>
-                  <ion-text color="primary">
-                    <h2><strong>{{ venue.name }}</strong></h2>
-                  </ion-text>
-                  
-                  <h3>
-                    <ion-badge slot="start" color="secondary" class="rooms">
-                      <ion-icon name="book" color="tertiary"></ion-icon>
-                      {{ venue.numb_available_rooms }} {{ 'app.label.availrooms' | translate }}
-                    </ion-badge>
-                  </h3>
-                </ion-label>
-              </ion-item>
-            </agm-info-window>
-          </agm-marker>
-        </agm-map>
-        <!-- # -->
-      </div>
     </div>
     <!-- # -->
   </div>

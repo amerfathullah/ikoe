@@ -66,13 +66,6 @@
         <ion-select-option *ngFor="let method of paymentMethods" [value]="method">{{method}}</ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-item>
-      <ion-icon name="logo-usd" slot="start" color="dark"></ion-icon>
-      <ion-label color="primary">Currency</ion-label>
-      <ion-select [(ngModel)]="currency">
-        <ion-select-option *ngFor="let currency of currencies" [value]="currency">{{currency}}</ion-select-option>
-      </ion-select>
-    </ion-item>
   </ion-list>
   <ion-list>
     <ion-list-header>
@@ -80,11 +73,6 @@
         <h5>Other</h5>
       </ion-text>
     </ion-list-header>
-    <ion-item>
-      <ion-icon name="mail" slot="start" color="primary"></ion-icon>
-      <ion-label class="label" color="primary">Enable Promotions</ion-label>
-      <ion-toggle [(ngModel)]="enablePromo"></ion-toggle>
-    </ion-item>
     <ion-item>
       <ion-icon name="mail" slot="start" color="primary"></ion-icon>
       <ion-label class="label" color="primary">Enable History</ion-label>

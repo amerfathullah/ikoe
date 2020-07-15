@@ -29,23 +29,6 @@
     <div [ngSwitch]="VenueSegment">
       <div *ngSwitchCase="'details'">
 
-        <ion-card class="ion-no-margin ion-margin-top ion-margin-bottom animated fadeIn">
-          <ion-card-content class="ion-no-padding">
-            <agm-map [latitude]="venue.location.lat" [longitude]="venue.location.lon" [zoom]="14" [zoomControl]="false" [styles]="agmStyles"
-              [streetViewControl]="false">
-              <agm-marker [latitude]="venue.location.lat" [longitude]="venue.location.lon"></agm-marker>
-            </agm-map>
-          </ion-card-content>
-          <ion-card-content class="bg-white">
-            <h2>
-              <ion-text color="primary">
-                <strong>{{ 'app.label.address' | translate }}</strong>
-              </ion-text>
-            </h2>
-            <p>{{venue.address}}</p>
-          </ion-card-content>
-        </ion-card>
-
         <ion-card class="ion-no-margin ion-margin-bottom bg-white animated fadeIn">
           <ion-card-content>
             <ion-card-title>
@@ -54,9 +37,6 @@
           
             <ion-text color="dark" class="ion-margin-bottom">
               <p>{{venue.description}}</p>
-            </ion-text>
-            <ion-text color="dark" class="ion-margin-bottom">
-              <p>{{venue.location_text}}</p>
             </ion-text>
             
           </ion-card-content>
@@ -104,7 +84,7 @@
           <ion-card-content>
             
             <ion-card-subtitle>
-              <ion-text color="secondary">{{room.beds}}</ion-text>
+              <ion-text color="secondary">{{room.chairs}}</ion-text>
             </ion-card-subtitle>
 
             <ion-card-title>

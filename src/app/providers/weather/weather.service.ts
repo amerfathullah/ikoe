@@ -15,13 +15,6 @@ export class WeatherService {
     this.url = 'https://api.openweathermap.org/data/2.5/weather?q=';
   }
 
-  getWeather(state, city): Observable<any> {
-    return this.http.get(this.url + city + ',' + state + '&appid=' + this.apiKey).pipe(
-      map(this.extractData),
-      catchError(this.handleError)
-    );
-  }
-
   // Private
   private extractData(res: Response) {
     let body = res;

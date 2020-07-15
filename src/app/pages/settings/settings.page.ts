@@ -14,8 +14,8 @@ export class SettingsPage implements OnInit {
   enablePromo: any;
   enableHistory: any;
 
-  languages: any = ['English', 'Portuguese', 'French'];
-  paymentMethods: any = ['Paypal', 'Credit Card'];
+  languages: any = ['English', 'Malay', 'Arabic'];
+  paymentMethods: any = ['Online Banking', 'Credit Card'];
   currencies: any = ['USD', 'BRL', 'EUR'];
 
   constructor(public navCtrl: NavController) { }

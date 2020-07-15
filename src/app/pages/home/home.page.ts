@@ -19,7 +19,6 @@ export class HomePage {
 
   childs: any = 0;
   children: number;
-  venuelocation: string;
 
   agmStyles: any[] = environment.agmStyles;
 
@@ -59,7 +58,6 @@ export class HomePage {
   }
 
   itemSelected(item: string) {
-    this.venuelocation = item;
     this.showItems = false;
   }
 

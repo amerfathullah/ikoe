@@ -23,7 +23,6 @@ import { TranslateProvider, VenueProvider } from './providers';
 
 // Modal Pages
 import { ImagePageModule } from './pages/modal/image/image.module';
-import { LocationPageModule } from './pages/modal/location/location.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -38,7 +37,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     HttpClientModule,
     ImagePageModule,
-    LocationPageModule,
     IonicStorageModule.forRoot({
       name: '__iKOE',
       driverOrder: ['indexeddb', 'sqlite', 'websql']

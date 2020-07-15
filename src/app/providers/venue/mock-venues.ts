@@ -17,7 +17,7 @@ export let VENUES = [
     services: [
       {
         id: 1,
-        icon: "snow-outline",
+        icon: "snow",
         name: "Air Conditioner"
       },
       {
@@ -51,10 +51,10 @@ export let VENUES = [
       },
       {
         id: 2,
-        active: 1,
+        active: 0,
         name: "ENG LRM E1-2-17",
         chairs: "40",
-        refundable: 1,
+        refundable: 0,
         room_info: "Air-conditioned. Internet, computer, projector provided.",
         thumb: "assets/img/venue/thumb/venue_2.jpg",
         price: 0
@@ -79,7 +79,7 @@ export let VENUES = [
     services: [
       {
         id: 1,
-        icon: "snow-outline",
+        icon: "snow",
         name: "Air Conditioner"
       },
       {
@@ -113,10 +113,10 @@ export let VENUES = [
       },
       {
         id: 2,
-        active: 1,
+        active: 0,
         name: "ENG TR E1-3-17",
         chairs: "60",
-        refundable: 1,
+        refundable: 0,
         room_info: "Air-conditioned. Internet, computer, projector provided.",
         thumb: "assets/img/venue/thumb/venue_2.jpg",
         price: 0
@@ -141,7 +141,7 @@ export let VENUES = [
     services: [
       {
         id: 1,
-        icon: "snow-outline",
+        icon: "snow",
         name: "Air Conditioner"
       },
       {
@@ -175,10 +175,10 @@ export let VENUES = [
       },
       {
         id: 2,
-        active: 1,
+        active: 0,
         name: "ENG EXAM HALL 3 E0-4",
         chairs: "70",
-        refundable: 1,
+        refundable: 0,
         room_info: "Air-conditioned. Internet, computer, projector provided.",
         thumb: "assets/img/venue/thumb/venue_2.jpg",
         price: 0
@@ -203,7 +203,7 @@ export let VENUES = [
     services: [
       {
         id: 1,
-        icon: "snow-outline",
+        icon: "snow",
         name: "Air Conditioner"
       },
       {
@@ -247,10 +247,10 @@ export let VENUES = [
       },
       {
         id: 2,
-        active: 1,
+        active: 0,
         name: "ENG AUDI B E2-2-9",
         chairs: "80",
-        refundable: 1,
+        refundable: 0,
         room_info: "Air-conditioned. Internet, computer, speakers, projector provided.",
         thumb: "assets/img/venue/thumb/venue_2.jpg",
         price: 0
@@ -275,7 +275,7 @@ export let VENUES = [
     services: [
       {
         id: 1,
-        icon: "snow-outline",
+        icon: "snow",
         name: "Air Conditioner"
       },
       {
@@ -319,10 +319,10 @@ export let VENUES = [
       },
       {
         id: 2,
-        active: 1,
-        name: "Grand Deluxe",
+        active: 0,
+        name: "ENG LT2 E0-1",
         chairs: "100",
-        refundable: 1,
+        refundable: 0,
         room_info: "Air-conditioned. Internet, computer, speakers, projector provided.",
         thumb: "assets/img/venue/thumb/venue_2.jpg",
         price: 0

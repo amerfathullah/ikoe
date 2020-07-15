@@ -60,7 +60,7 @@ export class VenueProvider {
     findByName(searchKey: string) {
         let key: string = searchKey.toUpperCase();
         return Promise.resolve(this.venues.filter((property: any) =>
-            (property.title + ' ' + property.address + ' ' + property.city + ' ' + property.description).toUpperCase().indexOf(key) > -1));
+            (property.title + property.description).toUpperCase().indexOf(key) > -1));
     }
 
     getFavorites() {
