@@ -9,9 +9,9 @@ export let VENUES = [
     thumb: "assets/img/venue/thumb/venue_1.jpg",
     images: [
       "assets/img/venue/thumb/venue_1.jpg",
-      "assets/img/venue/thumb/venue_4.jpg",
-      "assets/img/venue/thumb/venue_5.jpg",
-      "assets/img/venue/thumb/venue_6.jpg"
+      "assets/img/venue/thumb/venue_1.jpg",
+      "assets/img/venue/thumb/venue_1.jpg",
+      "assets/img/venue/thumb/venue_1.jpg",
     ],
     free_wifi: 1,
     services: [
@@ -46,7 +46,7 @@ export let VENUES = [
         seats: "40",
         refundable: 1,
         room_info: "Air-conditioned. Wifi, computer, projector provided.",
-        thumb: "assets/img/venue/thumb/venue_4.jpg",
+        thumb: "assets/img/venue/thumb/venue_1.jpg",
         price: 0
       },
       {
@@ -56,7 +56,7 @@ export let VENUES = [
         seats: "40",
         refundable: 1,
         room_info: "Air-conditioned. Wifi, computer, projector provided.",
-        thumb: "assets/img/venue/thumb/venue_2.jpg",
+        thumb: "assets/img/venue/thumb/venue_1.jpg",
         price: 0
       },
     ]
@@ -71,9 +71,9 @@ export let VENUES = [
     thumb: "assets/img/venue/thumb/venue_2.jpg",
     images: [
       "assets/img/venue/thumb/venue_2.jpg",
-      "assets/img/venue/thumb/venue_4.jpg",
-      "assets/img/venue/thumb/venue_5.jpg",
-      "assets/img/venue/thumb/venue_6.jpg"
+      "assets/img/venue/thumb/venue_2.jpg",
+      "assets/img/venue/thumb/venue_2.jpg",
+      "assets/img/venue/thumb/venue_2.jpg",
     ],
     free_wifi: 1,
     services: [
@@ -108,7 +108,7 @@ export let VENUES = [
         seats: "60",
         refundable: 1,
         room_info: "Air-conditioned. Wifi, computer, projector provided.",
-        thumb: "assets/img/venue/thumb/venue_4.jpg",
+        thumb: "assets/img/venue/thumb/venue_2.jpg",
         price: 0
       },
       {
@@ -133,9 +133,9 @@ export let VENUES = [
     thumb: "assets/img/venue/thumb/venue_3.jpg",
     images: [
       "assets/img/venue/thumb/venue_3.jpg",
-      "assets/img/venue/thumb/venue_4.jpg",
-      "assets/img/venue/thumb/venue_5.jpg",
-      "assets/img/venue/thumb/venue_6.jpg"
+      "assets/img/venue/thumb/venue_3.jpg",
+      "assets/img/venue/thumb/venue_3.jpg",
+      "assets/img/venue/thumb/venue_3.jpg",
     ],
     free_wifi: 1,
     services: [
@@ -170,7 +170,7 @@ export let VENUES = [
         seats: "70",
         refundable: 1,
         room_info: "Air-conditioned. Wifi, computer, projector provided.",
-        thumb: "assets/img/venue/thumb/venue_4.jpg",
+        thumb: "assets/img/venue/thumb/venue_3.jpg",
         price: 0
       },
       {
@@ -180,7 +180,7 @@ export let VENUES = [
         seats: "70",
         refundable: 1,
         room_info: "Air-conditioned. Wifi, computer, projector provided.",
-        thumb: "assets/img/venue/thumb/venue_2.jpg",
+        thumb: "assets/img/venue/thumb/venue_3.jpg",
         price: 0
       },
     ]
@@ -195,9 +195,9 @@ export let VENUES = [
     thumb: "assets/img/venue/thumb/venue_4.jpg",
     images: [
       "assets/img/venue/thumb/venue_4.jpg",
-      "assets/img/venue/thumb/venue_7.jpg",
-      "assets/img/venue/thumb/venue_5.jpg",
-      "assets/img/venue/thumb/venue_6.jpg"
+      "assets/img/venue/thumb/venue_4.jpg",
+      "assets/img/venue/thumb/venue_4.jpg",
+      "assets/img/venue/thumb/venue_4.jpg",
     ],
     free_wifi: 1,
     services: [
@@ -252,7 +252,7 @@ export let VENUES = [
         seats: "80",
         refundable: 1,
         room_info: "Air-conditioned. Wifi, computer, speakers, projector provided.",
-        thumb: "assets/img/venue/thumb/venue_2.jpg",
+        thumb: "assets/img/venue/thumb/venue_4.jpg",
         price: 0
       },
     ]
@@ -267,9 +267,9 @@ export let VENUES = [
     thumb: "assets/img/venue/thumb/venue_5.jpg",
     images: [
       "assets/img/venue/thumb/venue_5.jpg",
-      "assets/img/venue/thumb/venue_8.jpg",
-      "assets/img/venue/thumb/venue_7.jpg",
-      "assets/img/venue/thumb/venue_6.jpg"
+      "assets/img/venue/thumb/venue_5.jpg",
+      "assets/img/venue/thumb/venue_5.jpg",
+      "assets/img/venue/thumb/venue_5.jpg",
     ],
     free_wifi: 1,
     services: [
@@ -314,7 +314,7 @@ export let VENUES = [
         seats: "100",
         refundable: 1,
         room_info: "Air-conditioned. Wifi, computer, speakers, projector provided.",
-        thumb: "assets/img/venue/thumb/venue_4.jpg",
+        thumb: "assets/img/venue/thumb/venue_5.jpg",
         price: 0
       },
       {
@@ -324,7 +324,7 @@ export let VENUES = [
         seats: "100",
         refundable: 1,
         room_info: "Air-conditioned. Wifi, computer, speakers, projector provided.",
-        thumb: "assets/img/venue/thumb/venue_2.jpg",
+        thumb: "assets/img/venue/thumb/venue_5.jpg",
         price: 0
       },
     ]

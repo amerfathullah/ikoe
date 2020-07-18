@@ -1,7 +1,8 @@
 {
   "name": "iKOE",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular",
   "id": "774ecd64"

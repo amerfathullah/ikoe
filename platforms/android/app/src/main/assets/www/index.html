@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head src="..\node_modules\first-input-delay\dist/first-input-delay.min.js">
+  <meta charset="utf-8">
+  <title>iKOE</title>
+
+  <base href="/" />
+
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="iKOE: KOE Venue Reservation System">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4F24AC">
+</head>
+<body>
+  <app-root></app-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAqRNFcPoIxELGf8S1ZvIXJnYTSTqU7yA0",
+      authDomain: "ikoe-iium-40507.firebaseapp.com",
+      databaseURL: "https://ikoe-iium-40507.firebaseio.com",
+      projectId: "ikoe-iium-40507",
+      storageBucket: "ikoe-iium-40507.appspot.com",
+      essagingSenderId: "734426827410",
+      appId: "1:734426827410:web:fd051a0a530435dac1b44b",
+      measurementId: "G-BFP2FW20RT"
+    };
+  </script>
+  <script>
+    perfMetrics.onFirstInputDelay(function(delay, evt) {
+      console.log('First Input Delay', delay);
+      console.log('Event details', evt);
+    });
+    </script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.16.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.16.1/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.16.1/firebase-auth.js"></script>
+  <script src="/__/firebase/7.16.1/firebase-firestore.js"></script>
+  <script src="/__/firebase/7.16.1/firebase-functions.js"></script>
+  <script src="/__/firebase/7.16.1/firebase-messaging.js"></script>
+  <script src="/__/firebase/7.16.1/firebase-storage.js"></script>
+  <script src="/__/firebase/7.16.1/firebase-performance.js"></script>
+  <script src="/__/firebase/7.16.1/firebase-database.js"></script>
+  <script src="/__/firebase/7.16.1/firebase-remote-config.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+
+  <script>
+    var perf = firebase.performance();
+  </script>
+<script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule defer></script><script src="cordova.js" defer></script><script src="vendor-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
+</html>
