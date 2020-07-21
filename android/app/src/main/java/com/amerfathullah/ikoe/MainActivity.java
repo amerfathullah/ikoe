@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.amerfathullah.ikoe;
 
 import android.os.Bundle;
 
