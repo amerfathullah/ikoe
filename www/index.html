@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en">
-<head src="..\node_modules\first-input-delay\dist/first-input-delay.min.js">
+<head src="../dist/first-input-delay.min.js">
+  <script>
+    perfMetrics.onFirstInputDelay(function(delay, evt) {
+      console.log('First Input Delay', delay);
+      console.log('Event details', evt);
+    });
+  </script>
   <meta charset="utf-8">
   <title>iKOE</title>
 
@@ -19,28 +25,10 @@
 
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4F24AC">
-</head>
+<link rel="stylesheet" href="styles.fa83ab28aed73b89869f.css"></head>
 <body>
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyAqRNFcPoIxELGf8S1ZvIXJnYTSTqU7yA0",
-      authDomain: "ikoe-iium-40507.firebaseapp.com",
-      databaseURL: "https://ikoe-iium-40507.firebaseio.com",
-      projectId: "ikoe-iium-40507",
-      storageBucket: "ikoe-iium-40507.appspot.com",
-      essagingSenderId: "734426827410",
-      appId: "1:734426827410:web:fd051a0a530435dac1b44b",
-      measurementId: "G-BFP2FW20RT"
-    };
-  </script>
-  <script>
-    perfMetrics.onFirstInputDelay(function(delay, evt) {
-      console.log('First Input Delay', delay);
-      console.log('Event details', evt);
-    });
-    </script>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="/__/firebase/7.16.1/firebase-app.js"></script>
 
@@ -62,5 +50,5 @@
   <script>
     var perf = firebase.performance();
   </script>
-<script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule defer></script><script src="vendor-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
+<script src="runtime-es2015.aef9e51dc081aaaaf3a4.js" type="module"></script><script src="runtime-es5.aef9e51dc081aaaaf3a4.js" nomodule defer></script><script src="polyfills-es5.94dd683a6c0998e3e912.js" nomodule defer></script><script src="polyfills-es2015.07072d52042337f452ba.js" type="module"></script><script src="main-es2015.b9701cd2b4e69d21df17.js" type="module"></script><script src="main-es5.b9701cd2b4e69d21df17.js" nomodule defer></script></body>
 </html>
