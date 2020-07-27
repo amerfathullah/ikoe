@@ -50,5 +50,11 @@
   <script>
     var perf = firebase.performance();
   </script>
+  <script>
+    perfMetrics.onFirstInputDelay(function(delay, evt) {
+      console.log('First Input Delay', delay);
+      console.log('Event details', evt);
+    });
+  </script>
 </body>
 </html>

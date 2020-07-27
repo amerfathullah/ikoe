@@ -17,8 +17,7 @@ const routes: Routes = [
   { path: 'support', loadChildren: () => import('./pages/support/support.module').then(m => m.SupportPageModule) },
   { path: 'messages', loadChildren: () => import('./pages/messages/messages.module').then(m => m.MessagesPageModule) },
   { path: 'message/:id', loadChildren: () => import('./pages/message/message.module').then(m => m.MessagePageModule) },
-  { path: 'verify-email', loadChildren: () => import('./pages/verify-email/verify-email.module').then( m => m.VerifyEmailPageModule)
-  },
+  { path: 'verify-email', loadChildren: () => import('./pages/verify-email/verify-email.module').then( m => m.VerifyEmailPageModule) },
 ];
 
 @NgModule({
