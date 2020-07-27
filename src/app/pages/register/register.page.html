@@ -32,7 +32,7 @@
           <ion-icon name="mail" item-start></ion-icon>
           Email
         </ion-label>
-        <ion-input color="secondary" type="email" formControlName="email"></ion-input>
+        <ion-input color="secondary" type="email" formControlName="email" #email required></ion-input>
       </ion-item>
       <p class="text08" *ngIf="onRegisterForm.get('email').touched && onRegisterForm.get('email').hasError('required')">
         <ion-text color="danger">
@@ -45,7 +45,7 @@
           <ion-icon name="lock" item-start></ion-icon>
           Password
         </ion-label>
-        <ion-input color="secondary" type="password" formControlName="password"></ion-input>
+        <ion-input color="secondary" type="password" formControlName="password" #password required></ion-input>
       </ion-item>
       <p color="danger" class="text08" *ngIf="onRegisterForm.get('password').touched && onRegisterForm.get('password').hasError('required')">
         <ion-text color="danger">
@@ -55,7 +55,7 @@
     </form>
 
     <div class="ion-margin-top">
-      <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="signUp()" [disabled]="!onRegisterForm.valid"
+      <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="signUp(email, password)" [disabled]="!onRegisterForm.valid"
         tappable>
         <ion-icon name="log-in"></ion-icon>
         Sign Up

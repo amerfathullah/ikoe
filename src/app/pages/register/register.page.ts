@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController, MenuController, LoadingController } from '@ionic/angular';
+import { Router } from "@angular/router";
+import { AuthenticationService } from "../../shared/authentication-service";
 
 @Component({
   selector: 'app-register',
@@ -14,6 +16,8 @@ export class RegisterPage implements OnInit {
     public navCtrl: NavController,
     public menuCtrl: MenuController,
     public loadingCtrl: LoadingController,
+    public authService: AuthenticationService,
+    public router: Router,
     private formBuilder: FormBuilder
   ) { }
 
@@ -35,15 +39,15 @@ export class RegisterPage implements OnInit {
     });
   }
 
-  async signUp() {
-    const loader = await this.loadingCtrl.create({
-      duration: 2000
-    });
-
-    loader.present();
-    loader.onWillDismiss().then(() => {
-      this.navCtrl.navigateRoot('/home');
-    });
+  signUp(email, password){
+    this.authService.RegisterUser(email.value, password.value)      
+    .then((res) => {
+      // Do something here
+      this.authService.SendVerificationMail()
+      this.router.navigate(['verify-email']);
+    }).catch((error) => {
+      window.alert(error.message)
+    })
   }
 
   // // //

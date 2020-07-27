@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController, MenuController, ToastController, AlertController, LoadingController } from '@ionic/angular';
 import { TranslateProvider } from '../../providers';
+import { Router } from "@angular/router";
+import { AuthenticationService } from "../../shared/authentication-service";
+
+
 
 @Component({
   selector: 'app-login',
@@ -18,7 +22,9 @@ export class LoginPage implements OnInit {
     public alertCtrl: AlertController,
     public loadingCtrl: LoadingController,
     private translate: TranslateProvider,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    public authService: AuthenticationService,
+    public router: Router
   ) { }
 
   ionViewWillEnter() {
@@ -89,6 +95,20 @@ export class LoginPage implements OnInit {
 
   goToHome() {
     this.navCtrl.navigateRoot('/home');
+  }
+
+  logIn(email, password) {
+    this.authService.SignIn(email.value, password.value)
+      .then((res) => {
+        if(this.authService.isEmailVerified) {
+          this.router.navigate(['dashboard']);          
+        } else {
+          window.alert('Email is not verified')
+          return false;
+        }
+      }).catch((error) => {
+        window.alert(error.message)
+      })
   }
 
 }

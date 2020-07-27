@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from "./shared/authentication-service";
 
 import { Platform, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -45,7 +46,8 @@ export class AppComponent {
     private statusBar: StatusBar,
     private translate: TranslateProvider,
     private translateService: TranslateService,
-    public navCtrl: NavController
+    public navCtrl: NavController,
+    public authService: AuthenticationService
   ) {
     this.appPages = [
       {

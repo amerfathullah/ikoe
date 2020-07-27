@@ -26,7 +26,7 @@
                     <strong>{{ 'app.pages.menu.editprofile' | translate }}</strong>
                   </ion-text>
                 </a> <ion-text color="secondary"> | </ion-text> 
-                <a class="text08" tappable (click)="logout()">
+                <a class="text08" tappable (click)="authService.SignOut()">
                   <ion-text color="tertiary">
                     <ion-icon name="log-out"></ion-icon>
                     <strong>{{ 'app.pages.menu.logout' | translate }}</strong>

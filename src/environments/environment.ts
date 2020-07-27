@@ -1,14 +1,14 @@
 export const environment = {
-  production: false, // set TRUE before you build and release a prod version.
-  firebase: {
+  production: true,
+  firebaseConfig: {
     apiKey: "AIzaSyAqRNFcPoIxELGf8S1ZvIXJnYTSTqU7yA0",
     authDomain: "ikoe-iium-40507.firebaseapp.com",
     databaseURL: "https://ikoe-iium-40507.firebaseio.com",
     projectId: "ikoe-iium-40507",
     storageBucket: "ikoe-iium-40507.appspot.com",
-    messagingSenderId: "YOUR734426827410SENDER_ID",
+    messagingSenderId: "734426827410",
     appId: "1:734426827410:web:fd051a0a530435dac1b44b",
-    measurementId: "G-BFP2FW20RT",
+    measurementId: "G-BFP2FW20RT"
   },
   // Set your app configurations here.
   // For the list of config options, please refer to https://ionicframework.com/docs/api/config/Config/
