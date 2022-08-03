@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{venue.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="animated fadeIn">
+  <ion-slides pager="true" class="ion-margin-bottom">
+    <ion-slide *ngFor="let image of venue.images" (click)="presentImage(image)">
+      <img [src]="image">
+      <div class="shadow"></div>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="ion-padding-horizontal">
+
+    <ion-segment [(ngModel)]="VenueSegment" color="primary">
+      <ion-segment-button value="details">
+        <ion-label>{{ 'app.label.details' | translate }}</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="rooms">
+        <ion-label>{{ 'app.label.rooms' | translate }}</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    
+    <div [ngSwitch]="VenueSegment">
+      <div *ngSwitchCase="'details'">
+
+        <ion-card class="ion-no-margin ion-margin-bottom bg-white animated fadeIn">
+          <ion-card-content>
+            <ion-card-title>
+              <ion-text color="primary">{{ 'app.label.about' | translate }}</ion-text>
+            </ion-card-title>
+          
+            <ion-text color="dark" class="ion-margin-bottom">
+              <p>{{venue.description}}</p>
+            </ion-text>
+            
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="ion-no-margin ion-margin-bottom bg-white animated fadeIn">
+          <ion-card-content>
+            <ion-card-title class="ion-margin-bottom">
+              <ion-text color="primary">{{ 'app.label.amenities' | translate }}</ion-text>
+            </ion-card-title>
+
+            <ion-chip class="ion-margin-left" color="primary" *ngFor="let services of venue.services">
+              <ion-icon [name]="services.icon"></ion-icon>
+              <ion-label>{{services.name}}</ion-label>
+            </ion-chip>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="ion-no-margin ion-margin-bottom bg-white animated fadeIn">
+          <ion-card-content>
+            <ion-card-title class="ion-margin-bottom">
+              <ion-text color="primary">{{ 'app.label.features' | translate }}</ion-text>
+            </ion-card-title>
+        
+            <ion-text color="dark">
+              <p>{{venue.features}}</p>
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+
+      </div>
+
+      <div *ngSwitchCase="'rooms'" [@staggerIn]='venue.rooms.length'>
+
+        <ion-card class="ion-no-margin ion-margin-vertical bg-white" *ngFor="let room of venue.rooms">
+          <img [src]="room.thumb">
+
+          <ion-card-content>
+            
+            <ion-card-subtitle>
+              <ion-text color="secondary">Seats: {{room.seats}}</ion-text>
+            </ion-card-subtitle>
+
+            <ion-card-title>
+              <ion-text color="primary">{{room.name}}</ion-text>
+            </ion-card-title>
+
+            <p><ion-text color="primary">{{room.room_info}}</ion-text></p>
+            
+            <ion-button size="large" shape="round" expand="full" color="success" (click)="checkout(venue.id, room.id)">
+              <ion-icon slot="start" name="book"></ion-icon>
+              {{ 'app.label.book' | translate }} ({{ room.price | currency:'MYR':'code' }})
+            </ion-button>
+          </ion-card-content>
+
+        </ion-card>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>
+
+<ion-footer class="animated fadeIn">
+    <ion-toolbar color="primary">
+      <ion-grid class="ion-no-padding">
+          <ion-row>
+            <ion-col size="4" class="ion-no-padding" offset="4">
+              <ion-button size="small" shape="round" expand="full" fill="clear" color="tertiary" (click)="favorite(venue)">
+                <ion-icon slot="start" name="heart"></ion-icon>
+                {{ 'app.button.fav' | translate }}
+              </ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-footer>

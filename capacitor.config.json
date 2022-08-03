@@ -1,0 +1,26 @@
+{
+  "appId": "com.amerfathullah.ikoe",
+  "appName": "iKOE",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {
+    "preferences": {
+      "ScrollEnabled": "false",
+      "android-minSdkVersion": "19",
+      "BackupWebStorage": "none",
+      "SplashMaintainAspectRatio": "true",
+      "FadeSplashScreenDuration": "1000",
+      "SplashShowOnlyFirstTime": "false",
+      "SplashScreen": "screen",
+      "AutohideSplashScreen": "false",
+      "SplashScreenDelay": "10000",
+      "FadeSplashScreen": "true"
+    }
+  }
+}

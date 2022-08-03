@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "734426827410",
+    "firebase_url": "https://ikoe-iium-40507.firebaseio.com",
+    "project_id": "ikoe-iium-40507",
+    "storage_bucket": "ikoe-iium-40507.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734426827410:android:c6c47c3977ba45f9c1b44b",
+        "android_client_info": {
+          "package_name": "com.amerfathullah.ikoe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734426827410-30hlrktilmm7sflkssp93769abvirnlp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amerfathullah.ikoe",
+            "certificate_hash": "82113d1fba3d1f85d8a23d3c111ec45329708623"
+          }
+        },
+        {
+          "client_id": "734426827410-tjcukea2cke23fltarvcuknb5gtje1rv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVFS7QfrmNjSq1C3qg1rdQvvCVaxk6qMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734426827410-tjcukea2cke23fltarvcuknb5gtje1rv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

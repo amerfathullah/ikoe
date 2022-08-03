@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'app.pages.venuelist.title.header' | translate }}</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="animated fadeIn">
+
+  <div class="ion-padding">
+
+    <ion-segment [(ngModel)]="venueLists" (ionChange)="segmentChanged($event)" color="light">
+      <ion-segment-button value="cardlist">
+        <ion-icon name="apps" color="tertiary"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="linelist">
+        <ion-icon name="list" color="tertiary"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div [ngSwitch]="venueLists">
+      <div *ngSwitchCase="'cardlist'" [@staggerIn]='venues?.length'>
+        <!-- # -->
+        <ion-card class="ion-no-margin ion-margin-bottom venuesCard" tappable routerLink="/venue-detail/{{venue.id}}" *ngFor="let venue of venues; let i = index">
+          <ion-img [src]="venue.thumb"></ion-img>
+        
+          <ion-card-title color="light">{{ venue.name }}</ion-card-title>
+          <div class="shadow"></div>
+          <ion-card-content>
+            <ion-badge slot="start" color="dark" class="rooms">
+              <ion-icon name="book" color="secondary"></ion-icon>
+              {{ venue.numb_available_rooms }} {{ 'app.label.availrooms' | translate }}
+            </ion-badge>
+        
+            <ion-badge slot="end" color="success" class="price">
+              <h3><strong>{{ venue.price | currency:'MYR':'code' }}</strong></h3>
+            </ion-badge>
+          </ion-card-content>
+        </ion-card>
+        <!-- # -->
+      </div>
+      <div *ngSwitchCase="'linelist'" [@staggerIn]='venues.length'>
+        <!-- # -->
+        <ion-item color="primary" tappable routerLink="/venue-detail/{{venue.id}}" class="ion-margin-bottom" *ngFor="let venue of venues; let i = index">
+          <ion-thumbnail slot="start">
+            <img [src]="venue.thumb">
+          </ion-thumbnail>
+          <ion-label>
+            <h2><strong>{{ venue.name }}</strong></h2>
+            <h3>
+              <ion-badge slot="start" color="secondary" class="rooms">
+                <ion-icon name="book" color="tertiary"></ion-icon>
+                {{ venue.numb_available_rooms }} {{ 'app.label.availrooms' | translate }}
+              </ion-badge>
+            </h3>
+          </ion-label>
+        </ion-item>
+        <!-- # -->
+      </div>
+    </div>
+    <!-- # -->
+  </div>
+
+</ion-content>

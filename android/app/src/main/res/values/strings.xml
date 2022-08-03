@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">iKOE</string>
+    <string name="title_activity_main">iKOE</string>
+    <string name="package_name">com.amerfathullah.ikoe</string>
+    <string name="custom_url_scheme">com.amerfathullah.ikoe</string>
+</resources>
